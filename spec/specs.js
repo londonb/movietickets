@@ -22,4 +22,8 @@ describe('processPrice', function() {
     var testMovie = new Movie("The Martian", false, 10, 10, 66);
     expect(testMovie.processPrice()).to.equal(7);
   });
+  it("will give ticket price for The Revenants matinee with senior discount", function() {
+    var testMovie = new Movie("The Revenants", false, 10, 4, 66);
+    expect(testMovie.processPrice()).to.equal(6);
+  });
 });
